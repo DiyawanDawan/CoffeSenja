@@ -84,6 +84,40 @@ body {
     display: none;
 }
 
+/* TODO css search */
+.navbar .search-form {
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 54rem;
+    height: 4rem;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.navbar .search-form.active {
+    transform: scaleY(1);
+}
+
+.navbar .search-form input {
+    height: 100%;
+    width: 100%;
+    font-size: 1.5rem;
+    color: var(--bg);
+    padding: 1.3rem;
+}
+
+.navbar .search-form label {
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--bg);
+    margin-right: 1.5rem;
+}
+
 
 /* TODO css hero */
 .hero {
@@ -139,17 +173,17 @@ body {
 }
 
 /* TODO css about */
-.about, .menu, .countact {
+.about, .menu, .countact, .products {
     padding: 8rem 7% 1.4rem;
     /* min-height: 100vh; */
 }
-.about h2, .menu h2, .countact h2 {
+.about h2, .menu h2, .countact h2, .products h2 {
     font-size: 2.6rem;
     margin-bottom: 2rem;
-    text-align: center;
+    text-align: center;    
 }
 
-.about h2 span, .menu h2 span, .countact h2 span{
+.about h2 span, .menu h2 span, .countact h2 span, .products h2 span{
     color: var(--dangger);
 }
 .about .row {
@@ -186,7 +220,7 @@ body {
 .menu h2 {
     margin-bottom: 1rem;
 }
-.menu p, .countact p {
+.menu p, .countact p, .products p {
     text-align: center;
     max-width: 500px;
     margin: auto;
@@ -215,6 +249,66 @@ body {
 }
 .menu .row .menu-card .menu-card-title {
     margin: 1rem auto 0.1rem;
+}
+
+
+/* Corrected CSS */
+.products .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Corrected typo */
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.products .products-card {
+    text-align: center;
+    border: 1px solid #666;
+    padding: 2rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.products .products-icon {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.products .products-icon a {
+    width: 4rem;
+    height: 4rem;
+    color: #fff;
+    margin: 0.3rem;
+    border: 1px solid #666;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.products .products-icon a:hover {
+background-color: var(--dangger);
+border: 1px solid var(--dangger);
+}
+
+.products .product-img {
+    padding: 1rem 0;
+}
+
+.products .product-img img {
+    height: 24rem;
+    width: 100%;
+}
+
+.products .product-content h3 {
+    font-size: 2rem;
+}
+
+.products .product-content .product-start {
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+.products .product-content .product-start .start{
+   color: var(--dangger);
 }
 .countact .row {
     display: flex;
@@ -352,6 +446,10 @@ footer .credit a {
 
     .navbar .navbar-nav a:hover::after {
         transform: scaleX(0.2);
+    }
+    .navbar .search-form {
+        width: 90%;
+        right: 2rem;
     }
 .menu p {
     font-size: 1.2rem;
