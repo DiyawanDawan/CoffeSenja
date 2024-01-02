@@ -181,7 +181,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url('../image/hero3.png');
+    background-image: url('../public/hero/hero3.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

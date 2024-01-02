@@ -1,3 +1,5 @@
+import '../css/style.css';
+
 document.addEventListener('DOMContentLoaded', () => {
     const navbarNav = document.querySelector('.navbar-nav');
     const hamburger = document.querySelector('#humberger-menu');
