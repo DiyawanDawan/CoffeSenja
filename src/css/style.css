@@ -186,9 +186,11 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
+    -webkit-mask-image: linear-gradient(rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+    mask-image: linear-gradient(rgba(0,0,0,1) 80%, rgba(0,0,0,0));
 }
 
-.hero::after {
+/* .hero::after {
     content: '';
     display: block;
     position: absolute;
@@ -196,11 +198,13 @@ body {
     height: 27%;
     bottom: 0;
     background: linear-gradient(0deg, rgba(1, 1, 8, 1) 10%, rgba(255, 255, 255, 0) 50%);
-}
+} */
 
 .hero .content {
     padding: 1.4rem 7%;
     max-width: 58rem;
+    position: fixed;
+    width: 100%;
 }
 
 .hero .content h1 {
@@ -269,6 +273,10 @@ body {
 .about .row .about-img img {
     width: 100%;
     border-radius: 20px;
+    mask-image: url('../public/menu/splash.svg');
+    mask-size: 50%;
+    mask-repeat: no-repeat;
+    mask-position: center;
 }
 
 .about .row .content {
